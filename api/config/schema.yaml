@@ -1,0 +1,24 @@
+# api/config/schema.yaml
+# The list of types and properties we want to use
+types:
+    Thing:
+        properties:
+            name: ~
+    EmployeeRole:
+        properties:
+            name: ~
+    Person:
+        properties:
+            familyName: ~
+            givenName: ~
+            address: { range : Text }
+            email: ~
+            memberOf: { range : Organization }
+            role: { range : EmployeeRole }
+    Organization:
+        properties:
+            address: { range : Text }
+            legalName: { range : Text }
+            employees: ~
+
+
